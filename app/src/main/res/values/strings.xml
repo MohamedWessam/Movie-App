@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">Cinema World</string>
+    <string name="enter_movie">Enter movie or actor</string>
+    <string name="enter_valid_name">Please, enter movie title or actor name</string>
+    <string name="also_known_as">Also known as :</string>
+    <string name="date_of_birth">Date of birth :</string>
+    <string name="place_of_birth">Place of birth :</string>
+    <string name="death_day">Death day :</string>
+    <string name="department">Department :</string>
+    <string name="homepage">Homepage :</string>
+    <string name="biography">Biography :</string>
+    <string name="average_rating">Average rating</string>
+    <string name="original_title">Original Title :</string>
+    <string name="language">Language :</string>
+    <string name="adult">Adult :</string>
+    <string name="running_time">Running time :</string>
+    <string name="budget">Budget :</string>
+    <string name="revenue">Revenue :</string>
+    <string name="type">Type :</string>
+    <string name="production_countries">Production Countries :</string>
+    <string name="release_date">Release Date :</string>
+    <string name="overview">Overview :</string>
+    <string name="stars">Stars :</string>
+    <string name="movie_crew">Movie Crew :</string>
+    <string name="production_companies">Production Companies :</string>
+    <string name="images_and_posters">Images and Posters :</string>
+    <string name="videos_and_trailers">Videos and Trailers :</string>
+    <string name="no">NO</string>
+    <string name="yes">YES</string>
+    <string name="character">Character:</string>
+    <string name="_10">/10</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="enter_actor">Enter Actor</string>
+</resources>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category_list">
+        <item>Search by movie title</item>
+        <item>Search by actor name</item>
+    </string-array>
+</resources>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".ui.actor.ActorDetailsActivity">
+
+        <com.github.florent37.diagonallayout.DiagonalLayout
+            android:id="@+id/actor_details_diagonal_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_175sdp"
+            android:background="@color/white"
+            app:diagonal_angle="8"
+            app:diagonal_direction="right"
+            app:diagonal_position="bottom">
+
+            <com.flaviofaria.kenburnsview.KenBurnsView
+                android:id="@+id/actor_details_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.github.florent37.diagonallayout.DiagonalLayout>
+
+        <View
+            android:id="@+id/line_shadow_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_4sdp"
+            android:layout_below="@id/actor_details_diagonal_view"
+            android:background="@drawable/shadow_line" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/actor_details_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/line_shadow_1"
+            android:fontFamily="@font/peralta"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Large"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:fontFamily="@font/peralta" />
+
+        <View
+            android:id="@+id/line_shadow_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_2sdp"
+            android:layout_below="@id/actor_details_name"
+            android:background="@drawable/shadow_line" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/person_detail_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/line_shadow_2"
+            android:layout_marginTop="@dimen/_8sdp">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/actor_detail_birthday_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextDetailTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/date_of_birth" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/actor_detail_birthday"
+                        style="@style/TextDetailsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/actor_detail_place_of_birth_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextDetailTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/place_of_birth" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/actor_detail_place_of_birth"
+                        style="@style/TextDetailsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/actor_detail_death_day_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextDetailTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/death_day" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/actor_detail_death_day"
+                        style="@style/TextDetailsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/actor_detail_biography_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        style="@style/TextDetailTitleStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/biography" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/actor_detail_biography"
+                        style="@style/TextDetailsStyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_2sdp" />
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/_8sdp"
+                        android:id="@+id/actor_detail_profile_images_recycler_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/offWhite"
+                        android:nestedScrollingEnabled="false" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</layout>

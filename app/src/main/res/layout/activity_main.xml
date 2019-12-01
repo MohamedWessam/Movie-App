@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="controller"
+            type="com.wessam.movieapp.ui.main.MainActivity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.MainActivity">
+
+        <include
+            android:id="@+id/main_toolbar"
+            layout="@layout/main_toolbar" />
+
+        <View
+            android:id="@+id/toolbar_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_3sdp"
+            android:layout_below="@id/main_toolbar"
+            android:background="@drawable/shadow_line" />
+
+        <org.angmarch.views.NiceSpinner
+            android:id="@+id/source_spinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toolbar_shadow"
+            android:background="@drawable/border_spinner"
+            android:fontFamily="@font/concert_one"
+            android:padding="@dimen/_14sdp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            app:entries="@array/category_list"
+            app:textTint="@color/black" />
+
+        <LinearLayout
+            android:id="@+id/search_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/source_spinner"
+            android:orientation="horizontal"
+            android:padding="@dimen/_8sdp">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/search_editText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/border_edittext"
+                android:hint="@string/enter_movie"
+                android:inputType="textAutoComplete"
+                android:lines="1"
+                android:padding="@dimen/_8sdp"
+                android:textColor="@color/black" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/search_button"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="@dimen/_34sdp"
+                android:layout_gravity="center_vertical"
+                android:onClick="@{() -> controller.onSearchButtonClick()}"
+                android:layout_marginStart="@dimen/_12sdp"
+                android:layout_marginEnd="@dimen/_12sdp"
+                android:background="?android:attr/selectableItemBackground"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_search" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="@dimen/_2sdp"
+            android:id="@+id/result_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/search_layout" />
+
+    </RelativeLayout>
+</layout>

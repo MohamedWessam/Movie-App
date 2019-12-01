@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/aclonica</item>
+        <item>@font/architects_daughter</item>
+        <item>@font/carter_one</item>
+        <item>@font/chicle</item>
+        <item>@font/concert_one</item>
+        <item>@font/margarine</item>
+        <item>@font/peralta</item>
+    </array>
+</resources>
